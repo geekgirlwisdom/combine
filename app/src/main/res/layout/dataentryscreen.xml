@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<TableRow  android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView
+            android:id="@+id/header"
+            android:src="@drawable/header"
+            android:layout_width="fill_parent"
+            android:scaleType="fitCenter"
+            android:layout_height="wrap_content" android:layout_column="2"
+            /> </TableRow>
+
+    <TableRow   android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:text="Please complete all fields"  android:id="@+id/txtView"  android:layout_column="2"  />
+    </TableRow>
+
+    <TableRow  >
+    <EditText
+        android:id="@+id/txt_task0"
+        android:text=""
+        android:layout_column="2"
+        android:width="400px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+        <CheckBox android:width="20px"  android:id="@+id/cb_task0" android:enabled="false"  android:layout_column="3" />
+        <TextView
+            android:id="@+id/id_task0"
+            android:layout_column="3"
+            android:text="0" android:visibility="invisible"  />
+        <!--
+        <EditText  android:id="@+id/dte_expectedDate"  android:inputType="date"    android:layout_column="3" />
+            -->
+    </TableRow>
+
+    <TableRow>
+    <!-- 1 -->
+    <TextView  android:id="@+id/lbl_task"   android:text="1"    android:layout_column="1"  />
+          <EditText android:id="@+id/txt_task1"  android:inputType="text"  android:width="400px" android:layout_column="2"    />
+        <CheckBox  android:layout_width="wrap_content"   android:layout_height="wrap_content" android:id="@+id/cb_task1"  android:layout_column="3" />
+         <TextView   android:id="@+id/id_task1"    android:layout_column="3"   android:width="45px"  android:text="0" android:visibility="invisible" />
+    </TableRow>
+
+    <!-- 2 -->
+    <TableRow>
+        <TextView android:text="2"   android:layout_column="1" />
+        <EditText   android:id="@+id/txt_task2"  android:inputType="text"  android:width="400px" android:layout_column="2"  />
+        <CheckBox  android:layout_width="wrap_content"   android:layout_height="wrap_content" android:id="@+id/cb_task2"   android:layout_column="3"  />
+        <TextView android:visibility="invisible" android:id="@+id/id_task2"   android:layout_column="3"   android:width="45px"  />
+    </TableRow>
+
+    <!-- 3-->
+    <TableRow>
+        <TextView android:text="3"   android:layout_column="1" />
+         <EditText  android:id="@+id/txt_task3" android:inputType="text"   android:layout_column="2"  android:width="400px"  />
+
+        <CheckBox   android:id="@+id/cb_task3"  android:layout_column="3"   />
+        <TextView android:visibility="invisible" android:id="@+id/id_task3" />
+
+    </TableRow>
+
+    <!-- 4 -->
+    <TableRow>
+        <TextView android:text="4"   android:layout_column="1" />
+        <EditText android:id="@+id/txt_task4" android:inputType="text"   android:width="400px" android:layout_column="2"  />
+        <CheckBox android:width="20px"  android:id="@+id/cb_task4"  android:layout_column="3"   />
+        <TextView android:visibility="invisible" android:id="@+id/id_task4" />
+
+    </TableRow>
+
+    <!-- 5 -->
+    <TableRow>
+        <TextView android:text="5"   android:layout_column="1" />
+        <EditText android:id="@+id/txt_task5" android:inputType="text"  android:width="400px" android:layout_column="2"  />
+
+        <CheckBox android:width="20px"  android:id="@+id/cb_task5" android:layout_column="3"/>
+        <TextView android:visibility="invisible" android:id="@+id/id_task5" />
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:onClick="save"
+            android:text="Save" android:layout_column="2"
+            />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/btnDelete"
+            android:onClick="delete"
+            android:text="Delete All" android:layout_column="2"
+            />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/btn_rewards"
+            android:onClick="showRewards"
+            android:text="Rewards" android:layout_column="2"
+            />
+
+    </TableRow>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/mainmenu" />
+
+</TableLayout>

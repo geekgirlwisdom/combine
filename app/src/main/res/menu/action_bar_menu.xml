@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <!--This is to move the icon from left to right side of action bar. Still figuring out. -->
+    <item
+        android:id="@+id/right_icon"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:orderInCategory="300"
+        android:title="User"
+        app:showAsAction="ifRoom"></item>
+
+</menu>
