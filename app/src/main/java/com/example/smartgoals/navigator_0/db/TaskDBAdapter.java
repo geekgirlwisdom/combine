@@ -175,7 +175,7 @@ public class TaskDBAdapter {
     public long getRecentParentid() throws SQLException
     {
         long parentid=0;
-        Cursor mCursor = db.rawQuery("select parentid from task where  parentid=999;",null);
+        Cursor mCursor = db.rawQuery("select  id from task where  parentid=999;",null);
 
         if (mCursor != null) {
             mCursor.moveToFirst();
